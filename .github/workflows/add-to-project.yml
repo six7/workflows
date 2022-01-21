@@ -32,7 +32,7 @@ jobs:
               }
             }`
             const result = await github.graphql(query)
-            return result.map(p => p.node.id )
+            return result.viewer.repository.issues.edges.map(p => p.node.id )
       - name: Add to project
         uses: actions/github-script@v5
         env:
