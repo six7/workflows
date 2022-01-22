@@ -3,8 +3,8 @@ name: Move to Project
 on:
   push:
   schedule:
-    # runs every 1 hour
-    - cron:  '0 * * * *'
+    # runs every 4 hours
+    - cron:  '0 */4 * * *'
 
 jobs:
   my-pull-requests:
